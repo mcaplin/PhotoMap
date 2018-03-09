@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		11D16EF31BD08AAE00B6CBFE /* PhotoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D16EF21BD08AAE00B6CBFE /* PhotoMapViewController.swift */; };
 		11D16EF51BD08ABE00B6CBFE /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D16EF41BD08ABE00B6CBFE /* FullImageViewController.swift */; };
+		13981FD42050F3DB00F18293 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13981FD32050F3DB00F18293 /* MapKit.framework */; };
+		13E070F32052258700C5A03E /* PhotoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E070F22052258700C5A03E /* PhotoAnnotation.swift */; };
 		228D474F19F5DA9F00DE9903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228D474E19F5DA9F00DE9903 /* AppDelegate.swift */; };
 		228D475419F5DA9F00DE9903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228D475219F5DA9F00DE9903 /* Main.storyboard */; };
 		228D475619F5DA9F00DE9903 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228D475519F5DA9F00DE9903 /* Images.xcassets */; };
@@ -33,6 +35,8 @@
 		11D16EF21BD08AAE00B6CBFE /* PhotoMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoMapViewController.swift; sourceTree = "<group>"; };
 		11D16EF41BD08ABE00B6CBFE /* FullImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
 		12B190D8026AA9DA033871B1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13981FD32050F3DB00F18293 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		13E070F22052258700C5A03E /* PhotoAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnnotation.swift; sourceTree = "<group>"; };
 		2258D28219F5E60100F013CE /* Photo Map-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photo Map-Bridging-Header.h"; sourceTree = "<group>"; };
 		228D474919F5DA9F00DE9903 /* Photo Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		228D474D19F5DA9F00DE9903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13981FD42050F3DB00F18293 /* MapKit.framework in Frameworks */,
 				C0BB236311B5B261447DED51 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +98,7 @@
 			children = (
 				22BB9BD319F5DCE9000048C2 /* Views */,
 				228D476E19F5DAA800DE9903 /* View Controllers */,
+				13E070F22052258700C5A03E /* PhotoAnnotation.swift */,
 				228D474E19F5DA9F00DE9903 /* AppDelegate.swift */,
 				228D475219F5DA9F00DE9903 /* Main.storyboard */,
 				228D475519F5DA9F00DE9903 /* Images.xcassets */,
@@ -158,6 +164,7 @@
 		C53175EB32E8EEC8585BFFB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13981FD32050F3DB00F18293 /* MapKit.framework */,
 				12B190D8026AA9DA033871B1 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -217,6 +224,7 @@
 				TargetAttributes = {
 					228D474819F5DA9F00DE9903 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 25TT9R78SH;
 						LastSwiftMigration = 0800;
 					};
 					228D475D19F5DAA000DE9903 = {
@@ -323,6 +331,7 @@
 				228D474F19F5DA9F00DE9903 /* AppDelegate.swift in Sources */,
 				11D16EF31BD08AAE00B6CBFE /* PhotoMapViewController.swift in Sources */,
 				228D477019F5DAFF00DE9903 /* LocationsViewController.swift in Sources */,
+				13E070F32052258700C5A03E /* PhotoAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -441,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -455,9 +464,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 25TT9R78SH;
 				INFOPLIST_FILE = "Photo Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.capcap.Photo-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Photo Map/Photo Map-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -471,9 +481,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 25TT9R78SH;
 				INFOPLIST_FILE = "Photo Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.capcap.Photo-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Photo Map/Photo Map-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

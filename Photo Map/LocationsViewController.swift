@@ -8,16 +8,27 @@
 
 import UIKit
 
+// Protocol definition - top of LocationsViewController.swift
+protocol LocationsViewControllerDelegate : class {
+    func locationsPickedLocation(controller: LocationsViewController, latitude: NSNumber, longitude: NSNumber)
+}
+
+
+
 class LocationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+    weak var delegate : LocationsViewControllerDelegate!
 
     // TODO: Fill in actual CLIENT_ID and CLIENT_SECRET
-    let CLIENT_ID = "CLIENT_ID GOES HERE"
-    let CLIENT_SECRET = "CLIENT_SECRET GOES HERE"
+    let CLIENT_ID = ""
+    let CLIENT_SECRET = ""
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
 
     var results: NSArray = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +66,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
         let lngString = "\(lng)"
 
         print(latString + " " + lngString)
+        delegate.locationsPickedLocation(controller: self, latitude: lat, longitude: lng)
     }
     
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -95,5 +107,6 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
         });
         task.resume()
     }
+    
 
 }
